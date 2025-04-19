@@ -33,35 +33,78 @@
 </head>
 <body class="font-poppins bg-gray-100 text-gray-900">
 
-    <!-- Navigation Bar -->
-    <nav class="flex justify-between items-center bg-white p-5 shadow-md">
-        <h1 class="text-2xl font-bold">Nostra</h1>
-        <div class="hidden md:flex gap-6">
-            <p class="text-lg"><a href="./index.html" class="hover:text-blue-600">Home</a></p>
-            <p class="text-lg"><a href="./index.html" class="hover:text-blue-600">New Arrival</a></p>
-            <p class="text-lg"><a href="./index.html" class="hover:text-blue-600">Most Wanted</a></p>
-            <p class="text-lg"><a href="collections.html" class="hover:text-blue-600">Collections</a></p>
-            <p class="text-lg"><a href="./contactus.html" class="hover:text-blue-600">Contact Us</a></p>
-        </div>
+   <!--Navigation Bar-->
+   <nav class=" text-black bg-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+            <!-- Logo Section -->
+            <div class="text-2xl font-bold">
+                <a href="#" class="">Nostra</a>
+            </div>
 
-        <div class="md:hidden">
-            <i id="side-navbar-activate" class="fa-solid fa-bars text-xl cursor-pointer"></i>
-        </div>
-    </nav>
+            <!-- Menu Items -->
+            <ul class="hidden md:flex gap-6 text-lg">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#" class="hover:underline " id="na">New Arrival</a></li>
+                <li><a href="#" class="hover:underline " id="mw">Most Wanted</a></li>
+                <li><a href="collection.html" class="hover:underline">Collections</a></li>
+                <li><a href="contactus.html" class="hover:underline">Contact Us</a></li>
+            </ul>
 
-    <!-- Side Navbar -->
-    <div class="side-navbar fixed top-0 left-0 bg-gray-800 text-white w-64 h-full hidden">
-        <p class="text-right p-4">
-            <i id="side-navbar-close" class="fa-solid fa-xmark text-2xl cursor-pointer"></i>
-        </p>
-        <div class="p-4">
-            <p class="mb-4"><a href="./index.html" class="block py-2">Home</a></p>
-            <p class="mb-4"><a href="./index.html" class="block py-2">New Arrival</a></p>
-            <p class="mb-4"><a href="./index.html" class="block py-2">Most Wanted</a></p>
-            <p class="mb-4"><a href="./collections.html" class="block py-2">Collections</a></p>
-            <p class="mb-4"><a href="./contactus.html" class="block py-2">Contact Us</a></p>
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">
+                ☰
+            </button>
         </div>
     </div>
+
+    <!-- Mobile Menu -->
+
+</nav>
+
+
+
+<!-- Side Navbar -->
+<!-- Add transform and default hidden state -->
+<div id="sideNavbar"
+class="transform -translate-x-full transition-transform duration-500 fixed top-16 h-screen w-[70%] bg-gray-800 p-5 text-white z-50 md:hidden">
+<!-- Close Button -->
+<p>
+<i class="fa-solid fa-xmark cursor-pointer text-2xl" id="nav-close" style="color: #ffffff;"></i>
+</p>
+
+<!-- Navigation Links -->
+<ul class="flex flex-col gap-6 mt-10">
+<li><a href="#" class="hover:underline">Home</a></li>
+<li><a href="#" class="hover:underline" id="na">New Arrival</a></li>
+<li><a href="#" class="hover:underline" id="mw">Most Wanted</a></li>
+<li><a href="collection.html" class="hover:underline">Collections</a></li>
+<li><a href="contactus.html" class="hover:underline">Contact Us</a></li>
+</ul>
+</div>
+
+
+
+<!-- Your nav and script code here -->
+
+<script>
+
+const opennav = document.getElementById("menu-toggle");
+const sidenav = document.getElementById("sideNavbar");
+const navclose = document.getElementById("nav-close");
+
+if (opennav && sidenav && navclose) {
+    opennav.addEventListener("click", () => {
+        sidenav.classList.remove("-translate-x-full");
+        sidenav.classList.add("translate-x-0");
+    });
+
+    navclose.addEventListener("click", () => {
+        sidenav.classList.remove("translate-x-0");
+        sidenav.classList.add("-translate-x-full");
+    });
+}
+</script>
 
     <!-- Contact Us Form -->
     <div class="container mx-auto my-10 px-4">
