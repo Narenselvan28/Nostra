@@ -9,18 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Mobile Navbar
-  const opennav = document.getElementById("menu-toggle");
-  const sidenav = document.getElementById("sideNavbar");
-  const navclose = document.getElementById("nav-close");
-  if (opennav && sidenav && navclose) {
-    opennav.addEventListener("click", function () {
-      sidenav.classList.add("left-[0%]");
-    });
-    navclose.addEventListener("click", function () {
-      sidenav.classList.add("left-[-40%]");
-    });
-  }
-
+ 
   // Swiper JS
   if (typeof Swiper !== "undefined") {
     new Swiper(".mySwiper", {

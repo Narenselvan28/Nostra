@@ -104,81 +104,97 @@
 
 
     <!-- Side Navbar -->
-    <div id="sideNavbar"
-        class="side-navbar bg-gray-800 p-5 text-white fixed top-16 h-screen w-[40%] -left-[40%] transition-all duration-500 z-50 md:hidden">
-        <!-- Close Button -->
-        <p>
-            <i class="fa-solid fa-xmark cursor-pointer text-2xl" id="nav-close" style="color: #ffffff;"></i>
-        </p>
+  <!-- Add transform and default hidden state -->
+<div id="sideNavbar"
+class="transform -translate-x-full transition-transform duration-500 fixed top-16 h-screen w-[70%] bg-gray-800 p-5 text-white z-50 md:hidden">
+<!-- Close Button -->
+<p>
+    <i class="fa-solid fa-xmark cursor-pointer text-2xl" id="nav-close" style="color: #ffffff;"></i>
+</p>
 
-        <!-- Navigation Links -->
-        <ul class="flex flex-col gap-6 mt-10">
-            <li><a href="#" class="hover:underline">Home</a></li>
-            <li><a href="#" class="hover:underline" id="na">New Arrival</a></li>
-            <li><a href="#" class="hover:underline" id="mw">Most Wanted</a></li>
-            <li><a href="collection.html" class="hover:underline">Collections</a></li>
-            <li><a href="contactus.html" class="hover:underline">Contact Us</a></li>
-        </ul>
-    </div>
+<!-- Navigation Links -->
+<ul class="flex flex-col gap-6 mt-10">
+    <li><a href="#" class="hover:underline">Home</a></li>
+    <li><a href="#" class="hover:underline" id="na">New Arrival</a></li>
+    <li><a href="#" class="hover:underline" id="mw">Most Wanted</a></li>
+    <li><a href="collection.html" class="hover:underline">Collections</a></li>
+    <li><a href="contactus.html" class="hover:underline">Contact Us</a></li>
+</ul>
+</div>
 
 
 
+<!-- Your nav and script code here -->
 
-    </div>
+<script>
+    
+    const opennav = document.getElementById("menu-toggle");
+    const sidenav = document.getElementById("sideNavbar");
+    const navclose = document.getElementById("nav-close");
 
-    <div class="container">
+    if (opennav && sidenav && navclose) {
+        opennav.addEventListener("click", () => {
+            sidenav.classList.remove("-translate-x-full");
+            sidenav.classList.add("translate-x-0");
+        });
 
-        <!--Slider-->
-        <div class="rounded-2xl swiper mySwiper relative w-[98%] h-[65vh] max-md:h-[40vh]">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide relative">
-                    <img src="./img/others/slider-one.jpg" class="w-full h-full object-cover" />
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">
-                        <h1 class="text-4xl max-md:text-xl font-bold">Level up your style with our</h1>
-                        <h4 class="text-xl max-md:text-sm mt-2">Summer Collections</h4>
-                        <button class="mt-4 px-5 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200">
-                            Shop Now <i class="fa fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
+        navclose.addEventListener("click", () => {
+            sidenav.classList.remove("translate-x-0");
+            sidenav.classList.add("-translate-x-full");
+        });
+    }
+</script>
 
-                <!-- Slide 2 -->
-                <div class="swiper-slide relative">
-                    <img src="./img/others/slider-two.jpg" class="w-full h-full object-cover" />
-                    <!-- Same content -->
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">
-                        <h1 class="text-4xl max-md:text-xl font-bold">Level up your style with our</h1>
-                        <h4 class="text-xl max-md:text-sm mt-2">Summer Collections</h4>
-                        <button class="mt-4 px-5 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200">
-                            Shop Now <i class="fa fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
 
-                <!-- Slide 3 -->
-                <div class="swiper-slide relative">
-                    <img src="./img/others/slider-three.jpg" class="w-full h-full object-cover" />
-                    <!-- Same content -->
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">
-                        <h1 class="text-4xl max-md:text-xl font-bold">Level up your style with our</h1>
-                        <h4 class="text-xl max-md:text-sm mt-2">Summer Collections</h4>
-                        <button class="mt-4 px-5 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200">
-                            Shop Now <i class="fa fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Navigation Arrows -->
-            <div class="swiper-button-prev text-white   w-12 h-12 rounded-full"></div>
-            <div class="swiper-button-next text-white w-12 h-12 rounded-full"></div>
-
-            <!-- Pagination -->
-            <div class="swiper-pagination text-white"></div>
+<div class="container mx-auto px-2">
+    <!-- Slider -->
+    <div class="rounded-2xl swiper mySwiper relative w-full h-[70vh] sm:h-[60vh] md:h-[50vh] max-md:h-[40vh]">
+      <div class="swiper-wrapper">
+        
+        <!-- Slide -->
+        <div class="swiper-slide relative">
+          <img src="./img/others/slider-one.jpg" class="w-full h-full object-cover rounded-2xl" />
+          <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center text-white text-center z-10 px-4">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg">Level up your style with our</h1>
+            <h4 class="text-sm sm:text-lg md:text-xl mt-2">Summer Collections</h4>
+            <button class="mt-4 px-4 sm:px-6 py-2 text-sm sm:text-base bg-white text-black font-semibold rounded hover:bg-gray-200 transition">
+              Shop Now <i class="fa fa-arrow-right ml-2"></i>
+            </button>
+          </div>
         </div>
+  
+        <!-- Slide 2 -->
+        <div class="swiper-slide relative">
+          <img src="./img/others/slider-two.jpg" class="w-full h-full object-cover rounded-2xl" />
+          <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center text-white text-center z-10 px-4">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg">Level up your style with our</h1>
+            <h4 class="text-sm sm:text-lg md:text-xl mt-2">Summer Collections</h4>
+            <button class="mt-4 px-4 sm:px-6 py-2 text-sm sm:text-base bg-white text-black font-semibold rounded hover:bg-gray-200 transition">
+              Shop Now <i class="fa fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+  
+        <!-- Slide 3 -->
+        <div class="swiper-slide relative">
+          <img src="./img/others/slider-three.jpg" class="w-full h-full object-cover rounded-2xl" />
+          <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center text-white text-center z-10 px-4">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg">Level up your style with our</h1>
+            <h4 class="text-sm sm:text-lg md:text-xl mt-2">Summer Collections</h4>
+            <button class="mt-4 px-4 sm:px-6 py-2 text-sm sm:text-base bg-white text-black font-semibold rounded hover:bg-gray-200 transition">
+              Shop Now <i class="fa fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Swiper Controls -->
+      <div class="swiper-button-prev text-white"></div>
+      <div class="swiper-button-next text-white"></div>
+      <div class="swiper-pagination"></div>
     </div>
-
+  </div>
+  
 
 
 
