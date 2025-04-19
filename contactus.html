@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!--Link Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="font-poppins bg-gray-100 text-gray-900">
+
+    <!-- Navigation Bar -->
+    <nav class="flex justify-between items-center bg-white p-5 shadow-md">
+        <h1 class="text-2xl font-bold">Nostra</h1>
+        <div class="hidden md:flex gap-6">
+            <p class="text-lg"><a href="./index.html" class="hover:text-blue-600">Home</a></p>
+            <p class="text-lg"><a href="./index.html" class="hover:text-blue-600">New Arrival</a></p>
+            <p class="text-lg"><a href="./index.html" class="hover:text-blue-600">Most Wanted</a></p>
+            <p class="text-lg"><a href="collections.html" class="hover:text-blue-600">Collections</a></p>
+            <p class="text-lg"><a href="./contactus.html" class="hover:text-blue-600">Contact Us</a></p>
+        </div>
+
+        <div class="md:hidden">
+            <i id="side-navbar-activate" class="fa-solid fa-bars text-xl cursor-pointer"></i>
+        </div>
+    </nav>
+
+    <!-- Side Navbar -->
+    <div class="side-navbar fixed top-0 left-0 bg-gray-800 text-white w-64 h-full hidden">
+        <p class="text-right p-4">
+            <i id="side-navbar-close" class="fa-solid fa-xmark text-2xl cursor-pointer"></i>
+        </p>
+        <div class="p-4">
+            <p class="mb-4"><a href="./index.html" class="block py-2">Home</a></p>
+            <p class="mb-4"><a href="./index.html" class="block py-2">New Arrival</a></p>
+            <p class="mb-4"><a href="./index.html" class="block py-2">Most Wanted</a></p>
+            <p class="mb-4"><a href="./collections.html" class="block py-2">Collections</a></p>
+            <p class="mb-4"><a href="./contactus.html" class="block py-2">Contact Us</a></p>
+        </div>
+    </div>
+
+    <!-- Contact Us Form -->
+    <div class="container mx-auto my-10 px-4">
+        <div class="contact-form bg-white p-8 rounded-lg shadow-lg w-full md:w-2/3 mx-auto">
+            <h2 class="text-2xl font-semibold text-center mb-6">Contact Us</h2>
+            <form action="#" method="post">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+                    <input type="text" id="name" name="name" required class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+                    <input type="text" id="email" name="email" required class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                </div>
+
+                <div class="mb-4">
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message:</label>
+                    <textarea id="message" name="message" required class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                </div>
+
+                <input type="submit" value="Submit" class="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200">
+            </form>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div class="news bg-blue-50 py-10 text-center">
+        <h2 class="text-2xl font-semibold">Join our News Letter</h2>
+        <p class="mt-2 text-gray-700">Signup for our email newsletter to get exclusive discounts, updates, and more</p>
+        <div class="mt-6">
+            <input class="search p-3 rounded-lg border border-gray-300 w-72 md:w-1/3" placeholder="Enter your email">
+        </div>
+        <div class="mt-4">
+            <button class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-200">Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer bg-gray-800 text-white py-8 mt-10">
+        <div class="footer-container max-w-6xl mx-auto flex justify-between">
+            <div class="footer-box-1 w-1/3">
+                <h2 class="text-2xl font-semibold">Nostra</h2>
+                <p class="mt-4 text-sm">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                <div class="footer-icon-container mt-4 flex space-x-4">
+                    <i class="icon fa-brands fa-instagram text-xl"></i>
+                    <i class="icon fa-brands fa-twitter text-xl"></i>
+                    <i class="icon fa-brands fa-facebook text-xl"></i>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-sm mt-6">© 2023 Nostra.com</p>
+    </div>
+
+    <!-- Link Javascript File -->
+    <script src="./contact.js"></script>
+</body>
+</html>

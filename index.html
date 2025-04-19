@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!--Link CSS File-->
+
+    <!--Link Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!--Link Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+    <script src="script.js"></script>
+    <!-- Tailwind CSS CDN -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Font Awesome (optional for arrow icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        /* Hide scrollbar for all browsers */
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--Offer Bar-->
+
+    <div id="offer-bar"
+        class="offer-bar  flex justify-center items-center  bg-black text-white gap-5 transition-all duration-700 md:gap-10"
+        style="background-color: #1D232C;">
+        <p class="p-1  text-xl md:text-2xl p-2">Sign Up and <b>GET 20% OFF</b> for your first Order </p>
+        <i class="fa-solid fa-xmark w-10  p-2 md:text-2xl " id="offer-close" style="color: #fcfcfd;"></i>
+
+    </div>
+
+
+
+
+
+    <!--Navigation Bar-->
+    <nav class=" text-black bg-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo Section -->
+                <div class="text-2xl font-bold">
+                    <a href="#" class="">Nostra</a>
+                </div>
+
+                <!-- Menu Items -->
+                <ul class="hidden md:flex gap-6 text-lg">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#" class="hover:underline " id="na">New Arrival</a></li>
+                    <li><a href="#" class="hover:underline " id="mw">Most Wanted</a></li>
+                    <li><a href="collection.html" class="hover:underline">Collections</a></li>
+                    <li><a href="contactus.html" class="hover:underline">Contact Us</a></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+
+    </nav>
+
+
+
+    <!-- Side Navbar -->
+    <div id="sideNavbar"
+        class="side-navbar bg-gray-800 p-5 text-white fixed top-16 h-screen w-[40%] -left-[40%] transition-all duration-500 z-50 md:hidden">
+        <!-- Close Button -->
+        <p>
+            <i class="fa-solid fa-xmark cursor-pointer text-2xl" id="nav-close" style="color: #ffffff;"></i>
+        </p>
+
+        <!-- Navigation Links -->
+        <ul class="flex flex-col gap-6 mt-10">
+            <li><a href="#" class="hover:underline">Home</a></li>
+            <li><a href="#" class="hover:underline" id="na">New Arrival</a></li>
+            <li><a href="#" class="hover:underline" id="mw">Most Wanted</a></li>
+            <li><a href="collection.html" class="hover:underline">Collections</a></li>
+            <li><a href="contactus.html" class="hover:underline">Contact Us</a></li>
+        </ul>
+    </div>
+
+
+
+
+    </div>
+
+    <div class="container">
+
+        <!--Slider-->
+        <div class="rounded-2xl swiper mySwiper relative w-[98%] h-[65vh] max-md:h-[40vh]">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide relative">
+                    <img src="./img/others/slider-one.jpg" class="w-full h-full object-cover" />
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">
+                        <h1 class="text-4xl max-md:text-xl font-bold">Level up your style with our</h1>
+                        <h4 class="text-xl max-md:text-sm mt-2">Summer Collections</h4>
+                        <button class="mt-4 px-5 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200">
+                            Shop Now <i class="fa fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide relative">
+                    <img src="./img/others/slider-two.jpg" class="w-full h-full object-cover" />
+                    <!-- Same content -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">
+                        <h1 class="text-4xl max-md:text-xl font-bold">Level up your style with our</h1>
+                        <h4 class="text-xl max-md:text-sm mt-2">Summer Collections</h4>
+                        <button class="mt-4 px-5 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200">
+                            Shop Now <i class="fa fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide relative">
+                    <img src="./img/others/slider-three.jpg" class="w-full h-full object-cover" />
+                    <!-- Same content -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">
+                        <h1 class="text-4xl max-md:text-xl font-bold">Level up your style with our</h1>
+                        <h4 class="text-xl max-md:text-sm mt-2">Summer Collections</h4>
+                        <button class="mt-4 px-5 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200">
+                            Shop Now <i class="fa fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <div class="swiper-button-prev text-white   w-12 h-12 rounded-full"></div>
+            <div class="swiper-button-next text-white w-12 h-12 rounded-full"></div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination text-white"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--Brands-->
+
+
+    <h2 class="mt-10 text-3xl font-bold ml-7">Brands</h2>
+    <div class="brands flex flex-wrap justify-center gap-28 mx-10 mt-10">
+        <div class="brands-item text-center">
+            <img class="brands-icon w-20 mx-auto" src="img/icons/behance.png" alt="">
+            <p>Puma</p>
+        </div>
+        <div class="brands-item text-center">
+            <img class="brands-icon w-20 mx-auto" src="img/icons/adidas.png" alt="">
+            <p>Adidas</p>
+        </div>
+        <div class="brands-item text-center">
+            <img class="brands-icon w-20 mx-auto" src="img/icons/simple.png" alt="">
+            <p>Simple</p>
+        </div>
+        <div class="brands-item text-center">
+            <img class="brands-icon w-20 mx-auto" src="img/icons/leaves.png" alt="">
+            <p>Leaves</p>
+        </div>
+        <div class="brands-item text-center">
+            <img class="brands-icon w-20 mx-auto" src="img/icons/behance.png" alt="">
+            <p>Behance</p>
+        </div>
+        <div class="brands-item text-center">
+            <img class="brands-icon w-20 mx-auto" src="img/icons/twitch.png" alt="">
+            <p>Twitch</p>
+        </div>
+        <div class="brands-item text-center">
+            <img class="brands-icon w-20 mx-auto" src="img/icons/leaves.png" alt="">
+            <p>Leaves</p>
+        </div>
+    </div>
+
+    <div class="service mt-20 px-5">
+        <div class="flex flex-col lg:flex-row items-center gap-10">
+            <div class="text-center lg:text-left font-bold text-2xl lg:text-4xl">
+                <h2>We Provide Best</h2>
+                <h2>Customer Experiences</h2>
+            </div>
+            <div class="text-center lg:text-left text-xl lg:text-3xl">
+                <p>|| We ensure that our customers have the best shopping experience</p>
+            </div>
+        </div>
+        <div class="servives-container-2 mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div style="background-color: #F2F4F7;" class="p-3 rounded text-center">
+                <i class="fa-regular fa-circle-check text-5xl" style="color: black;"></i>
+                <h4 class="font-bold mt-2">Original Products</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+            </div>
+            <div style="background-color: #F2F4F7;" class="p-3 rounded text-center">
+                <i class="fa-regular fa-face-smile text-5xl" style="color: black;"></i>
+                <h4 class="font-bold mt-2">Satisfaction Guarantee</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+            </div>
+            <div style="background-color: #F2F4F7;" class="p-3 rounded text-center">
+                <i class="fa-solid fa-broom text-5xl" style="color: black;"></i>
+                <h4 class="font-bold mt-2">New Arrival Everyday</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+            </div>
+            <div style="background-color: #F2F4F7;" class="p-3 rounded text-center">
+                <i class="fa-solid fa-truck-fast text-5xl" style="color: black;"></i>
+                <h4 class="font-bold mt-2">Fast & Free Shipping</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-10" id="NewArrival">
+        <h2 id="new-arrival" class="text-3xl font-bold ml-5">New Arrivals</h2>
+
+        <div class="new-arrival flex flex-wrap justify-center gap-20 m-5 mt-5">
+            <!-- Product Card -->
+            <div class="new-arrival-container relative w-full sm:w-72 rounded-2xl mt-5">
+                <!-- Product Image -->
+                <img class="w-full rounded-2xl" src="img/products/f1.jpg" alt="Product Image">
+
+                <!-- Dim Overlay -->
+                <div class="absolute inset-0 bg-black/60 rounded-2xl"></div>
+
+                <!-- White Button (centered) -->
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <span
+                        class="bg-white text-black px-4 py-2 rounded-full font-semibold flex items-center shadow-md hover:bg-gray-100 transition">
+                        Shop Now
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Repeat for additional products -->
+            <div class="new-arrival-container relative w-full sm:w-72 rounded-2xl mt-5">
+                <img class="w-full rounded-2xl" src="img/products/f7.jpg" alt="Product Image">
+                <div class="absolute inset-0 bg-black/60 rounded-2xl"></div>
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <span
+                        class="bg-white text-black px-4 py-2 rounded-full font-semibold flex items-center shadow-md hover:bg-gray-100 transition">
+                        Shop Now
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </span>
+                </button>
+            </div>
+
+            <div class="new-arrival-container relative w-full sm:w-72 rounded-2xl mt-5">
+                <img class="w-full rounded-2xl" src="img/products/n1.jpg" alt="Product Image">
+                <div class="absolute inset-0 bg-black/60 rounded-2xl"></div>
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <span
+                        class="bg-white text-black px-4 py-2 rounded-full font-semibold flex items-center shadow-md hover:bg-gray-100 transition">
+                        Shop Now
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </span>
+                </button>
+            </div>
+
+            <div class="new-arrival-container relative w-full sm:w-72 rounded-2xl mt-5">
+                <img class="w-full rounded-2xl" src="img/products/n7.jpg" alt="Product Image">
+                <div class="absolute inset-0 bg-black/60 rounded-2xl"></div>
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <span
+                        class="bg-white text-black px-4 py-2 rounded-full font-semibold flex items-center shadow-md hover:bg-gray-100 transition">
+                        Shop Now
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Scrollable Wrapper -->
+    <div class="ml-5" id="MostWanted">
+        <h1 class="text-3xl font-bold">Most Wanted</h1>
+
+        <div class="overflow-x-auto whitespace-nowrap py-5 scrollbar-hide">
+            <!-- Flex Container -->
+            <div class="flex gap-6 px-5 w-max">
+
+                <!-- Item 1 -->
+                <div class="most-wanted-container w-72 relative shrink-0">
+                    <img class="w-full rounded-2xl" src="img/products/f1.jpg" alt="Product Image">
+                    <p class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-sm font-semibold rounded">Sale
+                    </p>
+                    <i
+                        class="heart fa-solid fa-heart absolute bottom-2 right-2 text-xl text-black hover:scale-125 hover:transition-transform duration-300 ease-in-out"></i>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="most-wanted-container w-72 relative shrink-0">
+                    <img class="w-full rounded-2xl" src="img/products/n1.jpg" alt="Product Image">
+                    <p class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-sm font-semibold rounded">Sale
+                    </p>
+                    <i
+                        class="heart fa-solid fa-heart absolute bottom-2 right-2 text-xl text-black hover:scale-125 hover:transition-transform duration-300 ease-in-out"></i>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="most-wanted-container w-72 relative shrink-0">
+                    <img class="w-full rounded-2xl" src="img/products/n7.jpg" alt="Product Image">
+                    <p class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-sm font-semibold rounded">Sale
+                    </p>
+                    <i
+                        class="heart fa-solid fa-heart absolute bottom-2 right-2 text-xl text-black hover:scale-125 hover:transition-transform duration-300 ease-in-out"></i>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="most-wanted-container w-72 relative shrink-0">
+                    <img class="w-full rounded-2xl" src="img/products/n3.jpg" alt="Product Image">
+                    <p class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-sm font-semibold rounded">Sale
+                    </p>
+                    <i
+                        class="heart fa-solid fa-heart absolute bottom-2 right-2 text-xl text-black hover:scale-125 hover:transition-transform duration-300 ease-in-out"></i>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="most-wanted-container w-72 relative shrink-0">
+                    <img class="w-full rounded-2xl" src="img/products/f7.jpg" alt="Product Image">
+                    <p class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-sm font-semibold rounded">Sale
+                    </p>
+                    <i
+                        class="heart fa-solid fa-heart absolute bottom-2 right-2 text-xl text-black hover:scale-125 hover:transition-transform duration-300 ease-in-out"></i>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="most-wanted-container w-72 relative shrink-0">
+                    <img class="w-full rounded-2xl" src="img/products/n4.jpg" alt="Product Image">
+                    <p class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-sm font-semibold rounded">Sale
+                    </p>
+                    <i
+                        class="heart fa-solid fa-heart absolute bottom-2 right-2 text-xl text-black hover:scale-125 hover:transition-transform duration-300 ease-in-out"></i>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="most-wanted-container w-72 relative shrink-0">
+                    <img class="w-full rounded-2xl" src="img/products/n7.jpg" alt="Product Image">
+                    <p class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-sm font-semibold rounded">Sale
+                    </p>
+                    <i
+                        class="heart fa-solid fa-heart absolute bottom-2 right-2 text-xl text-black hover:scale-125 hover:transition-transform duration-300 ease-in-out"></i>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const hearts = document.querySelectorAll(".heart");
+
+                hearts.forEach((heart) => {
+                    heart.addEventListener("click", function () {
+                        // Toggle classes to switch between red and black colors
+                        heart.classList.toggle("text-red-600");  // Toggle the red color on click
+                        heart.classList.toggle("text-black");   // Toggle the black color on click
+                    });
+                });
+            });
+        </script>
+    </div>
+
+
+
+    <div class="initial-scroll-animate reveal-scroll-animate">
+        <div class="limited-offer p-5 sm:p-10 flex flex-col md:flex-row gap-8 md:gap-10 m-3 sm:m-5 rounded"
+            style="background-color: #1D232C;">
+
+            <!-- Image -->
+            <div class="limited-offer-img flex justify-center md:justify-start">
+                <img class="rounded w-full max-w-md md:ml-10" src="img/others/offer.jpg" alt="">
+            </div>
+
+            <!-- Text Content -->
+            <div class="limited-offer-text text-white flex flex-col justify-center gap-4 text-center md:text-left">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">Limited Offer</h2>
+                <h4 class="text-xl sm:text-2xl md:text-3xl font-semibold">35% OFF on this for the first 30 Customers
+                </h4>
+                <div class="flex justify-center md:justify-start">
+                    <button class="bg-white p-3 sm:p-4 w-40 rounded-2xl text-[#1D232C] font-semibold">
+                        Shop Now <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="news flex flex-col items-center mt-10 px-4">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center">Join our News Letter</h2>
+        <p class="text-lg sm:text-xl md:text-2xl mt-3 text-center max-w-2xl">
+            Signup for our email newspaper to get exclusive discounts, updates, and more
+        </p>
+
+        <!-- Input Field -->
+        <div class="w-full max-w-xl mt-5">
+            <input type="email" placeholder="Enter your email"
+                class="w-full border-2 border-black rounded-lg p-3 outline-none text-sm sm:text-base" />
+        </div>
+
+        <!-- Button Below -->
+        <div class="mt-4">
+            <button class=" text-white px-6 py-3 rounded-2xl text-sm sm:text-base" style="background-color: #1D232C;">
+                Subscribe <i class="fa-solid fa-arrow-right ml-1"></i>
+            </button>
+        </div>
+    </div>
+
+
+    </div>
+
+
+    <div class="footer bg-gray-800 text-white py-8 mt-10">
+        <div class="footer-container max-w-6xl mx-auto flex justify-between">
+            <div class="footer-box-1 w-1/3">
+                <h2 class="text-2xl font-semibold">Nostra</h2>
+                <p class="mt-4 text-sm">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                <div class="footer-icon-container mt-4 flex space-x-4">
+                    <i class="icon fa-brands fa-instagram text-xl"></i>
+                    <i class="icon fa-brands fa-twitter text-xl"></i>
+                    <i class="icon fa-brands fa-facebook text-xl"></i>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-sm mt-6">© 2023 Nostra.com</p>
+    </div>
+
+
+
+
+
+
+
+    <!--Link Javascript File-->
+    <script src="script.js"></script>
+</body>
+
+</html>
